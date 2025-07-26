@@ -1,122 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Myndoria</title>
   <style>
     body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
       color: #333;
       line-height: 1.6;
-      margin: 0;
-      padding: 2em;
     }
-    .container {
+    header, footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff;
+    }
+    main {
+      padding: 2rem;
       max-width: 700px;
       margin: auto;
       background: #fff;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     h1 {
-      color: #0077cc;
-      margin-bottom: 0.5em;
+      font-size: 2.5rem;
+      color: #222;
     }
-    p {
-      font-size: 1.1em;
-    }
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 1.5em 0;
-    }
-    .buttons a {
-      background: #0077cc;
+    a.button {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: #333;
       color: #fff;
-      padding: 0.6em 1.2em;
-      border-radius: 5px;
       text-decoration: none;
+      border-radius: 6px;
       transition: background 0.3s ease;
     }
-    .buttons a:hover {
-      background: #005fa3;
+    a.button:hover {
+      background: #555;
     }
-    .faq h3 {
-      margin-top: 1.2em;
-      color: #444;
+    ul {
+      list-style: none;
+      padding: 0;
     }
-    form {
-      margin-top: 2em;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    section {
+      margin-bottom: 2rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
     }
     input, textarea {
-      padding: 0.8em;
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-family: inherit;
     }
-    button {
-      background: #28a745;
+    input[type="submit"] {
+      background: #222;
       color: #fff;
-      padding: 0.8em;
       border: none;
-      border-radius: 5px;
+      margin-top: 1rem;
       cursor: pointer;
-      font-size: 1em;
     }
-    button:hover {
-      background: #218838;
+    input[type="submit"]:hover {
+      background: #444;
     }
-    footer {
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #777;
-      text-align: center;
+    #contact-helper {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #272727;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    #contact-helper:hover {
+      transform: scale(1.05);
+    }
+    #helper-message {
+      display: none;
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background: #ffffff;
+      color: #333;
+      padding: 12px 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-size: 13px;
+      max-width: 200px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Myndoria</h1>
-    <p>Welcome to Myndoria — a sanctuary for deep creativity, timeless wisdom, and mindful digital clarity. Here, ideas flow effortlessly, blending thoughtful insight with innovative tools — no distractions, just pure value.</p>
-
-    <div class="buttons">
-      <a href="#">Newsletter</a>
-      <a href="#">Instagram</a>
-      <a href="#">Pinterest</a>
-      <a href="#">Latest Insight Drop</a>
-    </div>
-
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
-      <h3>What is Myndoria?</h3>
-      <p>A curated space for digital clarity and creative inspiration — guided by insight and simplicity.</p>
-      <h3>Is this brand run by AI?</h3>
-      <p>Myndoria blends human wisdom with AI-powered tools to serve mindful creators — but it’s never soulless automation.</p>
-      <h3>Can I collaborate or contribute?</h3>
-      <p>Absolutely. Reach out through the form below — your ideas are welcome.</p>
+    <p>Quiet Wisdom. Boundless Insight.</p>
+  </header>
+  <main>
+    <section>
+      <p>Welcome to Myndoria — a sanctuary for deep creativity, timeless wisdom, and mindful digital clarity. Here, ideas flow effortlessly, blending thoughtful insight with innovative tools — no distractions, just pure value.</p>
+      <a class="button" href="#">Newsletter</a>
+      <a class="button" href="#">Instagram</a>
+      <a class="button" href="#">Pinterest</a>
+      <a class="button" href="#">Latest Insight Drop</a>
     </section>
 
     <section>
-      <h2>Contact Myndoria</h2>
-      <form action="https://formsubmit.co/myndoria@yahoo.com" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <input type="hidden" name="_next" value="https://myndoria.com/thank-you.html">
-        <button type="submit">Send Message</button>
-      </form>
+      <h2>Frequently Asked Questions</h2>
+      <p><strong>What is Myndoria?</strong><br>A curated space for digital clarity and creative inspiration — guided by insight and simplicity.</p>
+      <p><strong>Is this brand run by AI?</strong><br>Myndoria blends human wisdom with AI-powered tools to serve mindful creators — but it’s never soulless automation.</p>
+      <p><strong>Can I collaborate or contribute?</strong><br>Absolutely. Reach out through the form below — your ideas are welcome.</p>
     </section>
 
-    <footer>
-      <p>Myndoria is thoughtfully crafted with a blend of human insight and AI collaboration — evolving the way ideas come to life.</p>
-    </footer>
-  </div>
+    <section id="contact">
+      <h2>Contact Myndoria</h2>
+      <form action="https://formsubmit.co/Myndoria@yahoo.com" method="POST">
+        <input type="hidden" name="_next" value="thank-you.html">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" required>
+        <label for="email">Your Email</label>
+        <input type="email" name="email" required>
+        <label for="message">Your Message</label>
+        <textarea name="message" rows="5" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Myndoria is thoughtfully crafted with a blend of human insight and AI collaboration — evolving the way ideas come to life.</p>
+  </footer>
+
+  <div id="helper-message">Have a thought or question?<br>I’m here when you’re ready.</div>
+  <div id="contact-helper">💬</div>
+
+  <script>
+    const contactHelper = document.getElementById('contact-helper');
+    const helperMessage = document.getElementById('helper-message');
+    setTimeout(() => {
+      helperMessage.style.display = 'block';
+    }, 4000);
+    contactHelper.onclick = () => {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    };
+  </script>
 </body>
 </html>
