@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Myndoria</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Myndoria</h1>
+        <p>A sanctuary for deep creativity, timeless wisdom, and mindful digital clarity.</p>
+        <nav>
+            <button onclick="scrollToSection('insights')">Latest Insight Drop</button>
+            <button onclick="scrollToSection('faqs')">FAQs</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="insights">
+            <h2>Latest Insight Drop</h2>
+            <p>Quietly curated thoughts and tools to spark meaningful creation. (Coming soon)</p>
+        </section>
+
+        <section id="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>What is Myndoria?</strong><br>A curated space for digital clarity and creative inspiration — guided by insight and simplicity.</p>
+            <p><strong>Is this brand run by AI?</strong><br>Myndoria blends human wisdom with AI-powered tools to serve mindful creators — but it’s never soulless automation.</p>
+            <p><strong>Can I collaborate or contribute?</strong><br>Absolutely. Reach out through the form below — your ideas are welcome.</p>
+        </section>
+
+        <section id="contact" class="floating-form">
+            <h2>Contact Myndoria</h2>
+            <form action="https://formsubmit.co/Myndoria@yahoo.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Myndoria is thoughtfully crafted with a blend of human insight and AI collaboration — evolving the way ideas come to life.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
