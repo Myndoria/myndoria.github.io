@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Myndoria</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <script>
+    (function(){
+      if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+        window.chatbase=(...arguments)=>{
+          if(!window.chatbase.q){window.chatbase.q=[]}
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase=new Proxy(window.chatbase,{
+          get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}
+        })
+      }
+      const onLoad=function(){
+        const script=document.createElement("script");
+        script.src="https://www.chatbase.co/embed.min.js";
+        script.id="LUDGjcHhKRoJF5v2urvH1";
+        document.body.appendChild(script)
+      };
+      if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
+    })();
+  </script>
+</head>
+<body>
+  <header class="hero-section">
+    <nav class="navbar">
+      <div class="logo">Myndoria</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="monetization.html">Support</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="darkToggle">🌓</button>
+    </nav>
+    <div class="hero-text">
+      <h1>Quiet Wisdom. Boundless Insight.</h1>
+      <p>A sanctuary for creativity, clarity, and mindful digital presence.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section fade-in">
+      <h2>About Myndoria</h2>
+      <p>Myndoria is a space for deep creative work, mindful content, and digital clarity.</p>
+    </section>
+
+    <section id="faq" class="section fade-in">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <h3>Is this brand run by AI?</h3>
+        <p>Myndoria blends human insight with AI-powered tools to serve mindful creators.</p>
+        <h3>Can I contribute?</h3>
+        <p>Yes! Use the contact form to get in touch with ideas or collaborations.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section fade-in contact-form">
+      <h2>Contact</h2>
+      <form action="https://formsubmit.co/Myndoria@yahoo.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Myndoria. All rights reserved.</p>
+  </footer>
+</body>
+</html>
