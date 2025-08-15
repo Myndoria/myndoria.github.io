@@ -1,81 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Myndoria</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-  <script>
-    (function(){
-      if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-        window.chatbase=(...arguments)=>{
-          if(!window.chatbase.q){window.chatbase.q=[]}
-          window.chatbase.q.push(arguments)
-        };
-        window.chatbase=new Proxy(window.chatbase,{
-          get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}
-        })
-      }
-      const onLoad=function(){
-        const script=document.createElement("script");
-        script.src="https://www.chatbase.co/embed.min.js";
-        script.id="LUDGjcHhKRoJF5v2urvH1";
-        document.body.appendChild(script)
-      };
-      if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
-    })();
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myndoria - Welcome</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="script.js"></script>
 </head>
 <body>
-  <header class="hero-section">
-    <nav class="navbar">
-      <div class="logo">Myndoria</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="newsletter.html">Newsletter</a></li>
-        <li><a href="monetization.html">Support</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="darkToggle">🌓</button>
-    </nav>
-    <div class="hero-text">
-      <h1>Quiet Wisdom. Boundless Insight.</h1>
-      <p>A sanctuary for unlimited creativity, timeless wisdom and profound insight .</p>
-    </div>
-  </header>
+<header>
+<h1>Welcome to Myndoria</h1>
+<button id="darkModeToggle">🌙 Dark Mode</button>
+</header>
 
-  <main>
-    <section id="about" class="section fade-in">
-      <h2>About Myndoria</h2>
-      <p>Myndoria is a curated space for digital clarity, mindful content, and creative inspiration - guided by insight and simplicity. Fresh thought provoking posts are released regularly.</p>
-    </section>
+<nav>
+<a href="index.html">Home</a> |
+<a href="blog.html">Blog</a> |
+<a href="newsletter.html">Newsletter</a> |
+<a href="monetization.html">Support Us</a>
+</nav>
 
-    <section id="faq" class="section fade-in">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq">
-        <h3>Is this brand run by AI?</h3>
-        <p>No, Myndoria is thoughtfully crafted blending human insight with AI-powered tools to serve creators and enhance experiences, evolving the way ideas come to life. Myndoria will always come from the soul.</p>
-        <h3>Can I contribute?</h3>
-        <p>Yes! Use the contact form to get in touch with ideas or collaborations.</p>
-      </div>
-    </section>
+<main>
+<section>
+<h2>About Us</h2>
+<p>We’re Myndoria — your go-to hub for ideas, insights, and creativity. Explore our blog, sign up for our newsletter, or support us directly.</p>
+</section>
 
-    <section id="contact" class="section fade-in contact-form">
-      <h2>Contact</h2>
-      <form action="https://formsubmit.co/Myndoria@yahoo.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+<section id="faq">
+<h2>FAQ</h2>
+<ul>
+<li><strong>What is Myndoria?</strong> — A creative platform for sharing knowledge and inspiration.</li>
+<li><strong>How can I support?</strong> — Visit our Support page and donate via Buy Me a Coffee.</li>
+<li><strong>How do I contact you?</strong> — Use the form below!</li>
+</ul>
+</section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Myndoria. All rights reserved.</p>
-  </footer>
+<section id="contact">
+<h2>Contact Us</h2>
+<form action="thank-you.html" method="get">
+<label>Name:<br><input type="text" name="name" required></label><br>
+<label>Email:<br><input type="email" name="email" required></label><br>
+<label>Message:<br><textarea name="message" required></textarea></label><br>
+<button type="submit">Send</button>
+</form>
+</section>
+</main>
+
+<!-- Chatbase Bot -->
+<script>
+(function(){
+ if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+   window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(args)};
+   window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})
+ }
+ const onLoad=function(){
+   const script=document.createElement("script");
+   script.src="https://www.chatbase.co/embed.min.js";
+   script.id="LUDGjcHhKRoJF5v2urvH1";
+   script.domain="www.chatbase.co";
+   document.body.appendChild(script)
+ };
+ if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
+})();
+</script>
+
+<footer>
+<p>&copy; 2025 Myndoria. All rights reserved.</p>
+</footer>
 </body>
 </html>
